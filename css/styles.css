@@ -1,0 +1,158 @@
+:root {
+  --main-purple: #630bc6;
+  --accent-purple: #9c27b0;
+  --hover-purple: #7b1fa2;
+  --text-dark: #333;
+  --bg-overlay: rgba(255, 255, 255, 0.6);
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-main);
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('../image/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-overlay);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  max-width: 90%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.bg-purple {
+  background-color: var(--main-purple);
+}
+
+h3 {
+  color: var(--main-purple);
+  font-weight: 600;
+}
+
+button.btn-primary {
+  background-color: var(--accent-purple);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: var(--hover-purple);
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: var(--main-purple);
+}
+
+#equipo .col-md-2,
+#equipo .col-md-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#equipo .col-md-2:hover,
+#equipo .col-md-3:hover {
+  transform: translateY(-5px);
+}
+
+#equipo img {
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#equipo img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#inicio.inicio-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 120vh;
+  height: auto;
+  padding: 5vh 0; 
+  background-image: url('../image/ninoEnTerapia.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#inicio.inicio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* opcional: para legibilidad */
+  z-index: 1;
+}
+
+#inicio .contenido-hero {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.option-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+
+input[type="date"], input[type="time"] {
+  min-width: 150px;
+}
+
+.equipo-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
