@@ -27,11 +27,20 @@
     <section id="inicio" class="inicio-hero bg-white shadow-lg py-5">
   <div class="contenido-hero container">
     <h2 class="display-5 fw-semibold text-center mb-4">Agenda tu hora</h2>
-    
-    <div class="agendar-box p-4 rounded bg-light shadow w-100 mx-auto" style="max-width: 600px;">
-      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
-        <input type="email" class="form-control" placeholder="Ingresa tu correo" required>
-        <input type="date" class="form-control" required>
+
+        <div class="agendar-box p-5 rounded bg-light shadow w-100 mx-auto" style="max-width: 900px;">
+          <h3 class="mb-4 text-center">Agenda tu hora con un profesional</h3>
+          <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 flex-wrap">
+            <input type="email" class="form-control fs-5" placeholder="Ingresa tu correo" required>
+            <input type="date" class="form-control fs-5" required>
+         <select class="form-control w-100" required>
+         <option value="">Selecciona un profesional</option>
+         <option value="maria">María - Terapeuta Ocupacional</option>
+         <option value="juan">Juan - Psicólogo</option>
+         <option value="ana">Ana - Neuróloga</option>
+         <option value="pedro">Pedro - Psicopedagogo</option>
+         <option value="lucia">Lucía - Fonoaudióloga</option>
+      </select>
         <select class="form-control w-100" required>
         <option value="">Selecciona una hora</option>
         <option value="09:00">09:00</option>
